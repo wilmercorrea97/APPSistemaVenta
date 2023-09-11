@@ -7,6 +7,6 @@ export interface Venta {
     tipoPago:string,
     fechaRegistro?:string,
     totalTexto:string,
-    detalleVenta: DetalleVenta
+    detalleVenta: DetalleVenta[]
 
 }
