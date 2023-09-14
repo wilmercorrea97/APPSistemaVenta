@@ -16,7 +16,7 @@ import { UtilidadService } from 'src/app/Reutilizable/utilidad.service';
 
 export const MY_DATA_FORMATS={
   parse:{
-    dateInput: 'DD/MM/YYYY'
+    dateInput: 'DD/MMMM/YYYY'
   },
   display:{
     dateInput : 'DD/MM/YYYY',
@@ -79,8 +79,8 @@ export class HistorialVentaComponent implements OnInit,AfterViewInit {
   }
 
   buscarVentas(){
-    let _fechaInicio : string = '';
-    let _fechaFin : string = '';
+    let _fechaInicio : string = "";
+    let _fechaFin : string = "";
 
     if(this.formularioBusqueda.value.buscarPor === "fecha"){
       _fechaInicio = moment(this.formularioBusqueda.value.fechaInicio).format('DD/MM/YYYY');
@@ -105,9 +105,7 @@ export class HistorialVentaComponent implements OnInit,AfterViewInit {
       else
         this._utilidadServicio.mostrarAlerta("No se encontraron datos", "Oops!");
       },
-      error: (e)=> {
-
-      }
+      error: (e)=> {}
     })
   }
 
